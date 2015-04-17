@@ -5,7 +5,6 @@
 #-------------------------------------------------
 
 QT += core
-QT += network
 QT += serialport
 CONFIG += console
 
@@ -14,6 +13,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = rs232sample
 TEMPLATE = app
 
+LIBS += -lglut -lGLU
 
 SOURCES += main.cpp\
     rs232commmodule.cpp \
