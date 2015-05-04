@@ -4,10 +4,10 @@ test_rs232::test_rs232(QObject *parent) : QObject(parent)
 {
    /** how to use it? **/
      // open com3
-   emit com.sigOpenComm("com11");
-     // send data to com3
+   emit com.sigOpenComm("com3");
+     // send data to com3 (it is very very easy to send data to com port. 
    emit com.sigSendDatagram("Hello RS232 \n\r");
-     // handle the received data
+     // handle the signal from com for data received. 
    connect(&com,SIGNAL(sigDataReceived(QByteArray)),
          this,SLOT(onDataReceived(QByteArray)));
 
